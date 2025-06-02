@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Honk&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./src/style/reset.css">
+  <link rel="stylesheet" href="./src/style/index.css">
+
+  <title>UOL CHALLENGE</title>
+</head>
+<body>
+  <header>
+    <h1>UOL HEROES</h1>
+  </header>
+  <main>
+    <div class="heroes justice_league">
+      <img class="hero" id="jl-hero" src="" alt="Justice League heroe">
+    </div>
+    
+    <form action="" method="post">
+			<div class="input-container">
+        <label for="name-input">Gamer name*</label>
+				<input type="text" class="input" id="name-input" maxlength="50">
+			</div>
+			<div class="input-container">
+        <label for="email-input">Email*</label>
+				<input type="text" class="input" id="email-input" maxlength="50">
+			</div>
+			<div class="input-container">
+        <label for="telephone-input">Telephone</label>
+				<input type="text" class="input" id="telephone-input" maxlength="11">
+			</div>
+
+			<div class="select-team">
+				<p>I choose the team:*</p>
+
+				<div class="radio-container">
+					<label for="av-radio">
+						Avengers
+						<input type="radio" name="selected_team" id="av-radio">
+						<span class="radio-custom"></span>
+					</label>
+				</div>
+				<div class="radio-container">
+					<label for="jl-radio">
+						Justice League
+						<input type="radio" name="selected_team" id="jl-radio">
+						<span class="radio-custom"></span>
+					</label>
+				</div>
+			</div>
+
+			<div class="button-container">
+				<button type="submit" class="form-button" id="submit-button">Register</button>
+				<button type="button" class="form-button" id="other-button">List players</button>
+			</div>
+    </form>
+
+    <div class="heroes avengers">
+      <img class="hero" id="av-hero" src="" alt="Avengers hero">
+    </div>
+  </main>
+
+	<script src="./src/script/index.js"></script>
+	<script src="./src/script/form.js"></script>
+</body>
+</html>

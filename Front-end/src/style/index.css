@@ -1,0 +1,158 @@
+:root{
+  --color-blue: #023047;
+  --color-blue-light: #219EBC;
+  --color-white: #ffffff;
+  --color-yellow: #FFB703;
+  --color-yellow-dark: #FB8500;
+}
+
+*{
+  font-family: "Inter", sans-serif;
+  color: var(--color-white);
+
+}
+
+body{
+  background-color: var(--color-blue);
+}
+
+header{
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  h1{
+    cursor: pointer;
+    font-family: "Honk", system-ui;
+    font-size: 48px;
+  }
+}
+
+main{
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 120px;
+
+  .heroes{
+    width: 25%;
+
+    .grayscale {
+      filter: grayscale(100%);
+      transition: filter 0.5s ease-in-out;
+    } 
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .input-container{
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      font-weight: 500;
+
+      label{
+        font-family: "Inter", sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+      }
+      .input{
+        padding: 12px;
+        background-color: var(--color-blue-light);
+        border: 1px solid var(--color-yellow);
+        border-radius:  8px;
+        color: #ffffff;
+        font-weight: 400;
+      }
+      .input:focus{
+        outline: none;
+        border: 2px solid var(--color-yellow);
+      }
+    }
+
+    .select-team{
+      p{margin: 8px 0 4px;}
+      label{cursor: pointer;}
+
+      .radio-container{
+        /* Esconde o input radio padrão */
+        input[type="radio"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Estilo para o label que será o visual do radio */
+        .radio-custom {
+          cursor: pointer;
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          border: 1px solid var(--color-yellow); 
+          border-radius: 6px;
+          position: relative;
+          vertical-align: middle;
+          margin-right: 8px;
+          transition: background-color 0.2s ease-in-out;
+        }
+        input[type="radio"]:checked + .radio-custom::after {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: var(--color-yellow);
+            border-radius: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .radio-custom:hover {
+            box-shadow: 0 0 5px #ffb70380;
+        }
+      }
+    }
+
+    .button-container{
+      cursor: pointer;
+      display: flex;
+      gap: 12px;
+
+      .form-button{
+        cursor: pointer;
+        border-radius: 12px;
+        padding: 12px 8px;
+        width: 170px;
+        font-size: 20px;
+        font-weight: 500;
+      }
+      #submit-button{
+        background-color: var(--color-blue-light);
+        color: var(--color-blue);
+        border: 1px solid var(--color-yellow);
+      }
+      #submit-button:hover{
+        color: var(--color-white);
+      }
+      #other-button{
+        color: var(--color-yellow-dark);
+        background-color: var(--color-blue);
+        border: 1px solid var(--color-yellow-dark);
+        transition: step-start;
+      }
+      #other-button:hover{
+        background-color: var(--color-yellow-dark);
+        color: var(--color-white);
+      }
+    }
+  }
+}
